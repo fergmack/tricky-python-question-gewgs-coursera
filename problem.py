@@ -1,3 +1,4 @@
+# if size = 1 then the blocks size will be 4096, if over 4096 then the blocks size will be 2xblock_size etc
 def calculate_storage(filesize):
     block_size = 4096
     # Use floor division to calculate how many blocks are fully occupied
@@ -15,3 +16,16 @@ def calculate_storage(filesize):
 print(calculate_storage(1))    # Should be 4096
 print(calculate_storage(4096)) # Should be 4096
 print(calculate_storage(4097)) # Should be 8192
+
+# Calculate smallest prime factor
+def smallest_prime_factor(x):
+    """Returns the smallest prime number that is a divisor of x"""
+    # Start checking with 2, then move up one by one
+    n = 2
+    while n <= x:
+        if x % n == 0:
+            return n
+        n += 1
+
+print(smallest_prime_factor(12)) # should be 2
+print(smallest_prime_factor(15)) # should be 3
