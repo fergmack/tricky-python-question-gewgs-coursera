@@ -77,6 +77,45 @@ def sum_divisors(n):
 print(sum_divisors(6)) # Should be 1+2+3=6
 print(sum_divisors(12)) # Should be 1+2+3+4+6=16
 
+# -- Week 3 Practice: For Loops
+# Fill in the blanks to make the factorial function return the factorial of n. Then, print the first 10 factorials (from 0 to 9) with the 
+# corresponding number. Remember that the factorial of a number is defined as the product of an integer and all integers before it. 
+# For example, the factorial of five (5!) is equal to 1*2*3*4*5=120. Also recall that the factorial of zero (0!) is equal to 1.
 
+def factorial(n):
+    result = 1
+    if n ==0:
+      n=1
+    for x in range(1, n+1):
+        result = result*x
+    return result
 
+for n in range(10):
+    print(n, factorial(n))
+    
+# Write a script that prints the first 10 cube numbers (x**3), starting with x=1 and ending with x=10.
+for x in range(1, 11):
+  cube = x**3
+  print(x, cube)
+    
+#     Write a script that prints the multiples of 7 between 0 and 100. Print one multiple per line and avoid printing 
+#     any numbers that aren't multiples of 7. Remember that 0 is also a multiple of 7.
+for x in range(0, 101):
+  if x % 7 ==0:
+    print(x)
+
+# The retry function tries to execute an operation that might fail, it retries the operation for a number of attempts.
+# Currently the code will keep executing the function even if it succeeds. Modify the code so that it stops trying after the
+# operation succeeded.
+
+def retry(operation, attempts):
+  for n in range(attempts):
+    if operation():
+      print("Attempt " + str(n) + " succeeded")
+      break #add a break in here
+    else:
+      print("Attempt " + str(n) + " failed")
+    
+retry(create_user, 3)
+retry(stop_service, 5)
 
