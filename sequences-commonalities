@@ -1,0 +1,14 @@
+# loop through the sequence
+for element in sequences:
+
+# pick out the element with index [x]
+sequence[x]
+
+# get the length of the sequence
+len(sequence)
+
+# add sequences together - concat 
+sequence + sequence
+
+# find the element in the sequence with in
+element in sequence
