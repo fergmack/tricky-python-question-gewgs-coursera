@@ -290,3 +290,16 @@ def group_list(group, users):
 print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
 print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
 print(group_list("Users", "")) # Should be "Users:"
+
+# The skip_elements function returns every other element from the list, 
+# starting from the first. Complete this function to do that.
+def skip_elements(elements):
+  second_elements = []
+  for e in elements:
+    if elements.index(e) % 2 == 0:
+      second_elements.append(e)
+  return second_elements
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements([])) # Should be []
