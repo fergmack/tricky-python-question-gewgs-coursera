@@ -303,3 +303,17 @@ def skip_elements(elements):
 print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
 print(skip_elements([])) # Should be []
+
+# The guest_list function reads in a list of tuples with the name, age, and profession of each party guest, and prints the sentence
+# "Guest is X years old and works as __." for each one. 
+# For example, guest_list(('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")) should print out:
+# Ken is 30 years old and works as Chef.
+# Pat is 35 years old and works as Lawyer.
+# Amanda is 25 years old and works as Engineer.
+
+def guest_list(guests):
+	for i in guests:
+		name, age, job = i
+		print("{} is {} years old and works as {}.".format(name, age, job))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
