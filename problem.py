@@ -338,3 +338,21 @@ def skip_elements(elements):
 
 print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+
+# ---- From the Coursera Michigan Python3 Specilization ---- #
+# Count how many times a character occurs in a body of text
+f = open('scarlet.txt', 'r')
+txt = f.read()
+# now txt is one long string containing all the characters
+x = {} # start with an empty dictionary
+for c in txt:
+    if c not in x:
+        # we have not seen this character before, so initialize a counter for it
+        x[c] = 0
+
+    #whether we've seen it before or not, increment its counter
+    x[c] = x[c] + 1
+
+print("t: " + str(x['t']) + " occurrences")
+print("s: " + str(x['s']) + " occurrences")
+
