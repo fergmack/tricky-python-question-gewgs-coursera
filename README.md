@@ -1,1 +1,1 @@
-# tricky-python-question-gewgs-coursera
+# python-questions-gewgs-coursera
