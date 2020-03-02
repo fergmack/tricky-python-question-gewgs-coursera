@@ -371,7 +371,7 @@ toc['Chapter 3'] = 24
 print(toc)
 print('Chapter 5' in toc)
 
-Now, it's your turn! Have a go at iterating over a dictionary!
+# Now, it's your turn! Have a go at iterating over a dictionary!
 
 # Complete the code to iterate through the keys and values of the cool_beasts dictionary. 
 # Remember that the items method returns a tuple of key, value for each element in the dictionary.
@@ -387,3 +387,24 @@ wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
 for item in wardrobe:
   for color in wardrobe[item]:
     print("{} {}".format(color, item))
+
+# The groups_per_user function receives a dictionary, which contains group names with the list of users.
+# Users can belong to multiple groups. Fill in the blanks to return a dictionary with the users as keys and a list
+# of their groups as values.
+def groups_per_user(group_dictionary):
+	user_groups = {}
+	# Go through group_dictionary
+	for group, users in group_dictionary.items():
+		# Now go through the users in the group
+		for user in users:
+		  if user in user_groups.keys():
+		    user_groups[user].append(group)
+		  else:
+		    user_groups[user] = [group]
+
+	return(user_groups)
+
+print(groups_per_user({"local": ["admin", "userA"],
+		"public":  ["admin", "userB"],
+		"administrator": ["admin"] }))
+
