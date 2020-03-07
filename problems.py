@@ -592,3 +592,32 @@ Rorys_guests = { "Adam":2, "Brenda":3, "David":1, "Jose":3, "Charlotte":2, "Terr
 Taylors_guests = { "David":4, "Nancy":1, "Robert":2, "Adam":1, "Samantha":3, "Chris":5}
 
 print(combine_guests(Rorys_guests, Taylors_guests))
+
+# Use a dictionary to count the frequency of letters in the input string. Only letters should be counted, not blank spaces,
+# numbers, or punctuation. Upper case should be considered the same as lower case. For example, count_letters("This is a sentence.")
+# should return {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}.
+
+def count_letters(text):
+    result = {}
+    # text = text.replace(' ', '')
+    # text = text.replace('.', '')
+    # text = text.replace('!', '')
+    # text = text.replace(',', '')
+  # Go through each letter in the text
+    # Add or increment the value in the dictionary
+    for letter in text.lower():
+      # isalpha() checks to see if it's an alphabetic letter
+        if letter.isalpha() and letter not in result:
+            result[letter] = 1
+        elif letter.isalpha():
+            result[letter] += 1
+    return result
+
+print(count_letters("AaBbCc"))
+# Should be {'a': 2, 'b': 2, 'c': 2}
+
+print(count_letters("Math is fun! 2+2=4"))
+# Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+print(count_letters("This is a sentence."))
+# Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
