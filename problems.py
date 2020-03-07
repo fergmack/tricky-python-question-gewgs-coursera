@@ -621,3 +621,13 @@ print(count_letters("Math is fun! 2+2=4"))
 
 print(count_letters("This is a sentence."))
 # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+# What does the list "colors" contain after these commands are executed?
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
+# productes red, white, yellow, blue
+
+# What do the following commands return?
+host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
+host_addresses.keys()
+# prints the keys router, localhost, google
