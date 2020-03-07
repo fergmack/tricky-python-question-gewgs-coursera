@@ -485,7 +485,7 @@ print(groups_per_user({"local": ["admin", "userA"],
 		"public":  ["admin", "userB"],
 		"administrator": ["admin"] }))
 
-# -- Works but not the best solution probably -- 
+# -- Week 4 course 1: Works but not the best solution probably -- 
 # The format_address function separates out parts of the address string into new strings: house_number and street_name, and returns:
 # "house number X on street named Y". The format of the input string is: numeric house number, followed by the street name which 
 # may contain numbers, but never by themselves, and could be several
@@ -526,3 +526,14 @@ print(format_address("1001 1st Ave"))
 print(format_address("55 North Center Drive"))
 # Should print "house number 55 on street named North Center Drive"
 
+# Question 2
+# The highlight_word function changes the given word in a sentence to its upper-case version. 
+# For example, highlight_word("Have a nice day", "nice") returns "Have a NICE day". 
+# Can you write this function in just one line?
+
+def highlight_word(sentence, word):
+	return(sentence.replace(word, word.upper()))
+
+print(highlight_word("Have a nice day", "nice"))
+print(highlight_word("Shhh, don't be so loud!", "loud"))
+print(highlight_word("Automating with Python is fun", "fun"))
