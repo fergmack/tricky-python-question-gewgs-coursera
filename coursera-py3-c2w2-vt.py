@@ -1,5 +1,5 @@
 # very tricky 
-Write a program that finds the key in a dictionary that has the maximum value. If two keys have the same maximum value, it’s OK to print out either one. Fill in the skeleton code
+# Write a program that finds the key in a dictionary that has the maximum value. If two keys have the same maximum value, it’s OK to print out either one. Fill in the skeleton code
 
 
 
@@ -13,3 +13,23 @@ for k in ks:
 
 print("key " + best_key_so_far + " has the highest value, " + str(d[best_key_so_far]))
 
+# 1. Create a dictionary called d that keeps track of all the characters in the string placement and notes how many times each character was seen. Then, find the key with the lowest value in this dictionary and assign that key to min_value.
+
+placement = "Beaches are cool places to visit in spring however the Mackinaw Bridge is near. Most people visit Mackinaw later since the island is a cool place to explore."
+
+# count letters
+d = {}
+for c in placement:
+    if c not in d:
+        d[c] = 1
+    else:
+        d[c] += 1
+        
+keys = d.keys()
+min_value = list(keys)[0]
+
+for k in keys:
+    if d[k] < d[min_value]:
+        min_value = k 
+        
+print(min_value)
