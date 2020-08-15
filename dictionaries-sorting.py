@@ -76,3 +76,17 @@ for k in sorted(d, key=lambda k: d[k], reverse=True):
 dictionary = {"Flowers": 10, 'Trees': 20, 'Chairs': 6, "Firepit": 1, 'Grill': 2, 'Lights': 14}
 
 sorted_values = sorted(dictionary, key= lambda k: dictionary[k], reverse=True)
+
+# The property we want to sort by is the number of cities that begin with the letter ‘S’.
+def s_cities_count(city_list):
+    ct = 0
+    for city in city_list:
+        if city[0] == "S":
+            ct += 1
+    return ct
+
+states = {"Minnesota": ["St. Paul", "Minneapolis", "Saint Cloud", "Stillwater"],
+          "Michigan": ["Ann Arbor", "Traverse City", "Lansing", "Kalamazoo"],
+          "Washington": ["Seattle", "Tacoma", "Olympia", "Vancouver"]}
+
+print(sorted(states, key=lambda state: s_cities_count(states[state])))
