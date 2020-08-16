@@ -10,7 +10,7 @@ animals_sorted = sorted(animals)
 
 # The dictionary, medals, shows the medal count for six countries during the Rio Olympics. Sort the country names so they appear alphabetically. Save this list to the variable alphabetical.
 medals = {'Japan':41, 'Russia':56, 'South Korea':21, 'United States':121, 'Germany':42, 'China':70}
-alphabetical = sorted(medal)
+alphabetical = sorted(medals)
 
 # Given the same dictionary, medals, now sort by the medal count. Save the three countries with the highest medal count to the list, top_three.
 medals = {'Japan':41, 'Russia':56, 'South Korea':21, 'United States':121, 'Germany':42, 'China':70}
