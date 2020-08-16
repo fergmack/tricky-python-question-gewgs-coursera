@@ -32,5 +32,15 @@ ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
 
 sorted_ids = sorted(ids, key = last_four )
 
+# Sort the list ids by the last four digits of each id. Do this using lambda and not using a defined function. Save this sorted list in the variable sorted_id.
+ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
+sorted_id = sorted(ids, key=lambda x: str(x)[-4:] )
+
+# Sort the following list by each element’s second letter a to z. Do so by using lambda. Assign the resulting value to the variable lambda_sort.
+ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
+lambda_sort = sorted(ex_lst, key = lambda x: x[1])
+
+
+
 
 
