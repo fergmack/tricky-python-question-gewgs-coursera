@@ -12,7 +12,7 @@ print(nested2[3])
 nested2[2]['c'] = 'no'
 print(nested2)
 
-# -- 2 - you can have functions in a list and call them
+# -- 2 - you can have functions in a list and call them. Note that L[0] picks out the function square, L[0](3) calls the function square, passing it the parameter 3.
 def square(x):
     return x*x
 
