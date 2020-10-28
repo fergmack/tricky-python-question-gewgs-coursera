@@ -1,4 +1,33 @@
+# Follow the system described below and you will have success with extracting nested data. The process involves the following steps:
 
+# Understand the nested data object.
+
+# Extract one object at the next level down.
+
+# Repeat the process with the extracted object
+
+# Understand. Extract. Repeat.
+
+# Print the entire object. If it’s small enough, you may be able to make sense of the printout directly. If it’s a little bit larger, you may find it helpful to “pretty-print” it, with indentation showing the level of nesting of the data. We don’t have a way to pretty-print in our online browser-based environment, but if you’re running code with a full Python interpreter, you can use the dumps function in the json module. For example:
+
+import json
+print(json.dumps(res, indent=2))
+
+# If printing the entire object gives you something that’s too unwieldy, you have other options for making sense of it.
+
+# Copy and paste it to a site like https://jsoneditoronline.org/ which will let you explore and collapse levels
+
+# Print the type of the object.
+
+# If it’s a dictionary:
+# print the keys
+
+# If it’s a list:
+# print its length
+
+# print the type of the first item
+
+# print the first item if it’s of manageable size
 
 import json
 print(type(res)) # check type
