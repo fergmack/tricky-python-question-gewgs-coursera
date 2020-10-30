@@ -92,4 +92,37 @@ v3 = sports['gymnastics']['women']
 # Assign the string 'rings' to the name v4
 v4 = sports['gymnastics']['men'][-1]
 
-    
+# 7. Given the dictionary, nested_d, save the medal count for the USA from all three Olympics in the dictionary to the list US_count.
+
+nested_d = {'Beijing':{'China':51, 'USA':36, 'Russia':22, 'Great Britain':19}, 'London':{'USA':46, 'China':38, 'Great Britain':29, 'Russia':22}, 'Rio':{'USA':35, 'Great Britain':22, 'China':20, 'Germany':13}}
+
+US_count = []
+for key in nested_d:
+    for country in nested_d[key]:
+        if country == 'USA':
+            US_count.append(nested_d[key][country])
+            
+            # or 
+for host, values in nested_d.items():
+    for country, count in values.items():
+        if country == 'USA':
+            US_count.append(count)
+# 8. Iterate through the contents of l_of_l and assign the third element of sublist to a new list called third.
+third = []
+for l in l_of_l: 
+    third.append(l[2])
+
+
+
+# 9. Given below is a list of lists of athletes. Create a list, t, that saves only the athlete’s name if it contains the letter “t”. If it does not contain the letter “t”, save the athlete name into list other.
+athletes = [['Phelps', 'Lochte', 'Schooling', 'Ledecky', 'Franklin'], ['Felix', 'Bolt', 'Gardner', 'Eaton'], ['Biles', 'Douglas', 'Hamm', 'Raisman', 'Mikulak', 'Dalton']]
+
+t = []
+other = [] 
+
+for list in athletes:
+    for name in list:
+        if 't' in name:
+            t.append(name)
+        else:
+            other.append(name) 
