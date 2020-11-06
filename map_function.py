@@ -14,3 +14,12 @@ things3 = tripleStuff(things)
 print(things3)
 things4 = quadrupleStuff(things)
 print(things4)
+
+# Of course, once we get used to using the map function, it’s no longer necessary to define functions like tripleStuff and quadrupleStuff.
+things = [2, 5, 9]
+
+things4 = map((lambda value: 4*value), things)
+print(list(things4))
+
+# or all on one line
+print(list(map((lambda value: 5*value), [1, 2, 3])))
