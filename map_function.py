@@ -23,3 +23,18 @@ print(list(things4))
 
 # or all on one line
 print(list(map((lambda value: 5*value), [1, 2, 3])))
+
+# Using map, create a list assigned to the variable greeting_doubled that doubles each element in the list lst
+lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
+
+greeting_doubled =  list(map((lambda x: x*2), lst))
+
+# Below, we have provided a list of strings called abbrevs. Use map to produce a new list called abbrevs_upper that contains all the same strings in upper case.
+
+# Below, we have provided a list of strings called abbrevs. Use map to produce a new list called abbrevs_upper that contains all the same strings in upper case.
+
+
+abbrevs = ["usa", "esp", "chn", "jpn", "mex", "can", "rus", "rsa", "jam"]
+
+abbrevs_upper = list (     map( lambda x: x.upper(), abbrevs)
+                        )
